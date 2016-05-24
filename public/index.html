@@ -7,31 +7,29 @@
   <meta name="theme-color" content="#057193">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body ng-app="miniGame" ng-controller="ImagensController">
-  <form method="POST" ng-submit="submitPalavra()">
-    <input type="text" placeholder="Qual é o filme? Digite aqui." class="input-control" ng-model="acharPalavra" required>
+<body>
+  <form method="POST" name="palavra" autocomplete="off">
+    <input type="text" id="palavra-form" placeholder="Advinhe o filme, série ou desenho" class="input-control" required>
     <form input type="submit">
   </form>
   <div id="imgs">
-    <img  ng-repeat="imagem in imagens track by $index" src="imgs/libras/{{imagem}}" class="gesto">
+
   </div>
-  <div id="modal-nome" ng-hide="hideForm">
+  <div id="modal-nome">
     <div id="all-form">
-      <form method="POST" ng-submit="salvarNome()">
-        <input type="text" ng-model="nome" name="nome" id="input-modal" placeholder="Digite seu nome." required>
+      <form method="POST" name="save-name" autocomplete="off">
+        <input type="text" name="nome" id="input-modal" placeholder="Digite seu nome." required>
         <input type="submit" value="SALVAR" id="btn-salvar">
       </form>
     </div>
   </div>
-  <section class="sucesso" ng-show="vencedor">
-    Parabéns, <span class="win">{{vencedor.nome}}</span> venceu!
-    <img src="imgs/filmes/{{vencedor.imagem}}" alt="Filme vencedor" title="{{vencedor.filme}}">
-    <span class="win movie-title">{{vencedor.filme}}</span>
+  <section class="sucesso">
+    Parabéns, <span class="win" id="quem-venceu"></span> venceu!
+    <img src="" alt="Filme vencedor">
+    <span class="win movie-title"></span>
   </section>
 <script src="vendor/socket-io-client/socket.io.js"></script>
-<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/services/ContatoService.js"></script>
-<script src="js/controllers/ImagensController.js"></script>
 </body>
 </html>

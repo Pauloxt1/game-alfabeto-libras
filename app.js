@@ -9,17 +9,13 @@ app.use(express.static('public'));
 let vencedor = {filme: 'paulo', imagem: 'american.jpg'};
 
 io.on('connection', (socket) => {
-    io.emit('imagens', vencedor.filme);
+    io.emit('comecar jogo', vencedor.filme);
 
     socket.on('achar palavra', (palavra) => {
         if(palavra === vencedor.filme){
-            console.log('igual');
             vencedor.nome = socket.nome;
             io.emit('vencedor',vencedor);
-            vencedor = {filme: '', imagem: ''}
-            console.log(palavra);
-            console.log(vencedor.filme);
-            console.log(palavra);
+            vencedor = {filme: false, imagem: ''}
         }
     });
 
