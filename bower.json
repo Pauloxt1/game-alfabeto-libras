@@ -1,0 +1,27 @@
+{
+  "name": "faz-flama",
+  "description": "Mini game flama F.A.Z",
+  "main": "main.js",
+  "authors": [
+    "Paulo Roberto"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node.js",
+    "angular",
+    "mongodb"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "socket-io-client": "^1.4.5"
+  }
+}
