@@ -106,6 +106,7 @@ section.sucesso{
   color: rgb(61, 61, 61);
   font-size: 25px;
   line-height: 60px;
+  display: none;
 }
 
 section.sucesso > span.win{

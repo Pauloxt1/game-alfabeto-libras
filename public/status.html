@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin jogo libras</title>
+  <style>
+    * {
+      margin: 0 auto;
+    }
+    body{
+      text-align: center;
+    }
+    h1{
+      margin:7px 0;
+      font-family: Verdana;
+      color:rgb(79, 79, 79);
+      font-weight: normal;
+      display: none;
+    }
+    span#game{
+      color:rgb(5, 113, 147);
+      font-weight: bold;
+    }
+    button{
+      width: 500px;
+      height: 250px;
+      margin: 0 auto;
+      display: block;
+      outline: none;
+      border: 0;
+      border-radius: 2px;
+      margin-bottom: 10px;
+      font-family: Verdana;
+      font-size: 60px;
+      cursor: pointer;
+      color: #fff;
+    }
+    .btn-normal{
+      background-color: rgb(5, 113, 147);
+      border: 2px solid rgb(1, 62, 133);
+    }
+    .btn-waring{
+      background-color: rgb(198, 4, 4);
+      border: 2px solid rgb(162, 11, 11);
+    }
+  </style>
+</head>
+<body>
+    <h1 id="name-game">A resposta é: <span id="game"></span></h1>
+    <button class="btn-normal">Ligar</button>
+    <button class="btn-waring">Desligar</button>
+<script src="vendor/socket-io-client/socket.io.js"></script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
